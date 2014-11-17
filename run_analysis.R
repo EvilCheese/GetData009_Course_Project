@@ -1,6 +1,11 @@
 #################   CLASS PROJECT  ###############
-### The following packages are needed in order to run this script
-install.packages("dplyr")
+
+### The "dplyr" package is needed in order to run this script. please install the package with the following command if needed
+
+#install.packages("dplyr")
+
+#once the pakcage has been installed, this scrip completes all the steps necessary for the analysis - incluiding loading the libraries
+
 library(dplyr)
 
 #################        STEP 1    ###############
