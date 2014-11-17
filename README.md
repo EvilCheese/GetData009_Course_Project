@@ -1,4 +1,4 @@
-GetData008_Assignment
+GetData009_Course_Project
 =====================
 
 This scrip completes the assigment for the Getting and Cleaning Data Course from the JHS
