@@ -7,8 +7,11 @@ IMPORTANT - In order to run the script the package DPLYR needs to be installed u
 
 The scrip is self contained and completes all the steps required, specifically:
   - It downloads the raw data from  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+    The raw data is saved in the folder "Rawdata". The unzipped data is saved in the same folder
     The original data is from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
   - It unzips the data
+    
+
   - then, per the assignment instructions:
     1.  Merges the training and the test sets to create one data set.
     2.	Extracts only the measurements on the mean and standard deviation for each measurement. 
