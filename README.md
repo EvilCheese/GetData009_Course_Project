@@ -1,7 +1,9 @@
 GetData009_Course_Project
 =====================
 
-This scrip completes the assigment for the Getting and Cleaning Data Course from the JHS
+This scrip completes the assigment for the Getting and Cleaning Data Course from the JHS.
+
+IMPORTANT - In order to run the script the package DPLYR needs to be installed using the following command: install.packages("dplyr")
 
 The scrip is self contained and completes all the steps required, specifically:
   - It downloads the raw data from  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
