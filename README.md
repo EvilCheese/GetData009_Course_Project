@@ -20,12 +20,12 @@ The scrip is self contained and completes all the steps required, specifically:
     4.	Appropriately labels the data set with descriptive variable names. 
     5.	From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-The output from steps 1-4 above is a comma-delimited file entiled "Tidy_Dataset.csv"
+The output from steps 1-4 above is a  file entiled "Tidy_Dataset.txt"
 
-The output from step 5 is a comma-delimited file entitled "means_dataset.csv" The values in this file are 
-the averages (or mean) of each of the variables in the "Tidy_Dataset.csv" file
+The output from step 5 is a file entitled "means_dataset.txt" The values in this file are 
+the averages (or mean) of each of the variables in the "Tidy_Dataset.txt" file
 
-To execute all of the above run the script entitled "Run_Analysis.R"
+To execute all of the above run the script entitled "run_analysis.R"
 
 To see a description of all the variables please see the file entiled "Codebook.md" also included in this depository. 
 The CodeBook file describes the steps in the scrip and describes the variables included in each of the datasets.
