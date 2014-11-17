@@ -7,9 +7,10 @@ IMPORTANT - In order to run the script the package DPLYR needs to be installed u
 
 The scrip is self contained and completes all the steps required, specifically:
   - It downloads the raw data from  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
-    The raw data is saved in the folder "Rawdata". The unzipped data is saved in the same folder
     The original data is from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-  - It unzips the data
+    The raw data is saved in the folder "Rawdata" in a folder entitled "UCI_HAR_Dataset.zip"
+
+  - It unzips the data. The unzipped data is also saved in the Rawdata folder in a subfolder entitled "UCI HAR Dataset"
     
 
   - then, per the assignment instructions:
