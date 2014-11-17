@@ -1,0 +1,142 @@
+This CodeBook describes the variables, the data, and any transformations performed to clean up the data for this
+assigment
+
+Before any manipulations are done or data is downloaded, the script installs the packages needed - in this case
+the "dplyr" package
+
+Step 1 - Download rawdata and unzip it
+
+Step 2 - Clean the train data
+
+  Step 2A: upload the train files:
+    'X_train': Training set - dim(7352, 561)
+    'subject_train': Subject who performed the activity - range 1:30 - dim(7352,1)
+    'y_train': Training labels - range 1:6 - dim(7352,1) 
+  
+  Step 2B: Assign variables to the three datasets described above
+    The variable names given to the X_train file are based on the origial file "features.txt". More details provided below
+    The variable name given to the variable in the subject_train file is "Subject"
+    The variable name given to the variable in the y_train file is "Activity"
+
+  Step 2C: Clean up the X_train dataset
+  Step 2C consists of various steps:
+      selecting only the mean and standard deviation variables. This reduces the dimension of this dataframe to dim(7352, 68)
+      modifying the variable names so that they are easier to understand. 
+  
+  Step 2D: Merge "Clean" Train Data which was created in steps 2A through 2C
+    This tep cbinds the clean files subject_Train, y_train, and X_train.
+    
+Step 3 - Clean the Test Data
+  
+  Step 3A: upload the train files:
+    'X_test': Training set - dim(7352, 561)
+    'subject_test': Subject who performed the activity - range 1:30 - dim(7352,1)
+    'y_test': Training labels - range 1:6 - dim(7352,1) 
+  
+  Step 3B: Assign variables to the three datasets described in step 3A
+    The variable names given to the X_test file are based on the origial file "features.txt". More details provided below
+    The variable name given to the variable in the subject_test file is "Subject"
+    The variable name given to the variable in the y_test file is "Activity"
+
+  Step 3C: Clean up the X_test dataset
+    Step 3C consists of various steps:
+      selecting only the mean and standard deviation variables.
+      modifying the variable names so that they are easier to understand. 
+      
+  Step 3D: Merge "Clean" Test Data which was created in steps 3A through 3C
+    This step cbinds the clean files subject_test, y_test, and X_test.
+    
+Step 4 - Create Tidy Dataset
+  Step 4A: merges Train Data (from Step 2) and Test Data (from Step 3)
+  
+  Step 4B: Transforms the "Activity" variable into a factor and adds labels. The lablesl are based on the original "activity_labels.txt" file
+
+  Step 4C: Creates a tidy data, comma-delimited file entitled "Tidy_Dataset.csv". This file has dim(10,299, 68) the variables included are:
+      Subject
+      Activity  
+      TimeBodyAccelerometer_StdDeviation_axial_X
+      TimeBodyAccelerometer_StdDeviation_axial_Y
+      TimeBodyAccelerometer_StdDeviation_axial_Z
+      TimeGravityAccelerometer_StdDeviation_axial_X
+      TimeGravityAccelerometer_StdDeviation_axial_Y
+      TimeGravityAccelerometer_StdDeviation_axial_Z
+      TimeBodyAccelerometerJerkSignal_StdDeviation_axial_X
+      TimeBodyAccelerometerJerkSignal_StdDeviation_axial_Y
+      TimeBodyAccelerometerJerkSignal_StdDeviation_axial_Z
+      TimeBodyGyroscope_StdDeviation_axial_X
+      TimeBodyGyroscope_StdDeviation_axial_Y
+      TimeBodyGyroscope_StdDeviation_axial_Z
+      TimeBodyGyroscopeJerkSignal_StdDeviation_axial_X
+      TimeBodyGyroscopeJerkSignal_StdDeviation_axial_Y
+      TimeBodyGyroscopeJerkSignal_StdDeviation_axial_Z
+      TimeBodyAccelerometerMagnitude_StdDeviation
+      TimeGravityAccelerometerMagnitude_StdDeviation
+      TimeBodyAccelerometerJerkSignalMagnitude_StdDeviation
+      TimeBodyGyroscopeMagnitude_StdDeviation
+      TimeBodyGyroscopeJerkSignalMagnitude_StdDeviation
+      FastFourierTransformBodyAccelerometer_StdDeviation_axial_X
+      FastFourierTransformBodyAccelerometer_StdDeviation_axial_Y
+      FastFourierTransformBodyAccelerometer_StdDeviation_axial_Z
+      FastFourierTransformBodyAccelerometerJerkSignal_StdDeviation_axial_X
+      FastFourierTransformBodyAccelerometerJerkSignal_StdDeviation_axial_Y
+      FastFourierTransformBodyAccelerometerJerkSignal_StdDeviation_axial_Z
+      FastFourierTransformBodyGyroscope_StdDeviation_axial_X
+      FastFourierTransformBodyGyroscope_StdDeviation_axial_Y
+      FastFourierTransformBodyGyroscope_StdDeviation_axial_Z
+      FastFourierTransformBodyAccelerometerMagnitude_StdDeviation
+      FastFourierTransformBodyBodyAccelerometerJerkSignalMagnitude_StdDeviation
+      FastFourierTransformBodyBodyGyroscopeMagnitude_StdDeviation
+      FastFourierTransformBodyBodyGyroscopeJerkSignalMagnitude_StdDeviation
+      TimeBodyAccelerometer_MeanValue_axial_X
+      TimeBodyAccelerometer_MeanValue_axial_Y
+      TimeBodyAccelerometer_MeanValue_axial_Z
+      TimeGravityAccelerometer_MeanValue_axial_X
+      TimeGravityAccelerometer_MeanValue_axial_Y
+      TimeGravityAccelerometer_MeanValue_axial_Z
+      TimeBodyAccelerometerJerkSignal_MeanValue_axial_X
+      TimeBodyAccelerometerJerkSignal_MeanValue_axial_Y
+      TimeBodyAccelerometerJerkSignal_MeanValue_axial_Z
+      TimeBodyGyroscope_MeanValue_axial_X
+      TimeBodyGyroscope_MeanValue_axial_Y
+      TimeBodyGyroscope_MeanValue_axial_Z
+      TimeBodyGyroscopeJerkSignal_MeanValue_axial_X
+      TimeBodyGyroscopeJerkSignal_MeanValue_axial_Y
+      TimeBodyGyroscopeJerkSignal_MeanValue_axial_Z
+      TimeBodyAccelerometerMagnitude_MeanValue
+      TimeGravityAccelerometerMagnitude_MeanValue
+      TimeBodyAccelerometerJerkSignalMagnitude_MeanValue
+      TimeBodyGyroscopeMagnitude_MeanValue
+      TimeBodyGyroscopeJerkSignalMagnitude_MeanValue
+      FastFourierTransformBodyAccelerometer_MeanValue_axial_X
+      FastFourierTransformBodyAccelerometer_MeanValue_axial_Y
+      FastFourierTransformBodyAccelerometer_MeanValue_axial_Z
+      FastFourierTransformBodyAccelerometerJerkSignal_MeanValue_axial_X
+      FastFourierTransformBodyAccelerometerJerkSignal_MeanValue_axial_Y
+      FastFourierTransformBodyAccelerometerJerkSignal_MeanValue_axial_Z
+      FastFourierTransformBodyGyroscope_MeanValue_axial_X
+      FastFourierTransformBodyGyroscope_MeanValue_axial_Y
+      FastFourierTransformBodyGyroscope_MeanValue_axial_Z
+      FastFourierTransformBodyAccelerometerMagnitude_MeanValue
+      FastFourierTransformBodyBodyAccelerometerJerkSignalMagnitude_MeanValue
+      FastFourierTransformBodyBodyGyroscopeMagnitude_MeanValue
+      FastFourierTransformBodyBodyGyroscopeJerkSignalMagnitude_MeanValue
+      
+        A best effort has been made to make sure that the variables names of this dataset are self explanatory. However Additional information can be found in the "features_info.txt" of the raw files. According to this file:
+          "The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+          Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+          Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals)." 
+
+          These signals were used to estimate variables of the feature vector for each pattern:  
+          '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions."
+
+
+	
+      
+
+
+  Step 5: Create a dataset with the means of each of the variables
+    This creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+    This portion of the script uses the DPLYR functions.
+    The ouput file created is a comma-delimited file called "means_dataset.csv" with dim(180, 68)
+    The variaable names are the same as the file created in Step 4, except that the values are the mean values for each variable for each activyt and each subject.
+
