@@ -1,8 +1,12 @@
 This CodeBook describes the variables, the data, and any transformations performed to clean up the data for this
 assigment
 
-Before any manipulations are done or data is downloaded, the script installs the packages needed - in this case
-the "dplyr" package
+Before any manipulations are done or data is downloaded, the user needs to install the the "dplyr" package and load its library.
+After this has been done, the program can be run. The program will then complete the steps described below. 
+
+The KEY FILES created by this program are:
+"Tidy_Dataset.txt" which is created and described in more detail in Step 4C below.
+""means_dataset.txt" which is created and described in more detail in Step 5 below.
 
 Step 1 - Download rawdata and unzip it
 
@@ -51,7 +55,7 @@ Step 4 - Create Tidy Dataset
   
   Step 4B: Transforms the "Activity" variable into a factor and adds labels. The lablesl are based on the original "activity_labels.txt" file
 
-  Step 4C: Creates a tidy data, comma-delimited file entitled "Tidy_Dataset.csv". This file has dim(10,299, 68) the variables included are:
+  Step 4C: Creates a tidy data, comma-delimited file entitled "Tidy_Dataset.txt". This file has dim(10,299, 68) the variables included are:
       Subject
       Activity  
       TimeBodyAccelerometer_StdDeviation_axial_X
@@ -130,10 +134,10 @@ Step 4 - Create Tidy Dataset
           '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions."
 
   Step 5: Create a dataset with the means of each of the variables
-    This creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+    This step creates a second, independent tidy data set with the average of each variable for each activity and each subject.
     This portion of the script uses the DPLYR functions.
-    The ouput file created is a comma-delimited file called "means_dataset.csv" with dim(180, 68)
-    The variaable names are the same as the file created in Step 4, except that the values are the mean values for each variable for each activyt and each subject.
+    The ouput file created is a comma-delimited file called "means_dataset.txt" with dim(180, 68)
+    The variable names are the same as the file created in Step 4, except that the values contained are the mean values for each variable for each activyt and each subject.
 
 INFORMATION ABOUT THE DATA
 The raw data contains a file entitled "features_info.txt" which describes the data in more detail. The following is an excerpt, which describes the data in more detail:
